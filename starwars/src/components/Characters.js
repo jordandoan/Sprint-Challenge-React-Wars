@@ -30,7 +30,7 @@ useEffect(() => {
 
 
     return(
-        <Card>
+        <Card className="character">
             <H2>All about {props.info.name}!</H2>
             <p>Height: {props.info.height} cm</p>
             <p>Mass: {props.info.mass} kg</p>
