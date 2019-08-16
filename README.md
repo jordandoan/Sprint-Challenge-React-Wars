@@ -24,15 +24,30 @@ In this challenge, create a web page that presents a styled list of Star Wars ch
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
+- [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.  
+  
+React solves the problem of doing needless DOM operations. In React, it only updates the elements that have changed, without having to reload the page. It results in a seamless interaction with the web page. It does this through State and Components, which are fundamental to building a React app.  
 
-- [ ] What does it mean to _think_ in react?
+- [ ] What does it mean to _think_ in react?  
+  
+Thinking in React is thinking of state and components:
+  - State is data that the app can hold, which is updated usually through interaction from the user.
+  - Components are a way of breaking down an App into different pieces. When state is updated, only the components that are connected with that state are updated.
 
-- [ ] Describe state.
+- [ ] Describe state.  
+     
+ State is how React knows what parts of the App to update. When changes are made to State, it will re-render the necessary components to reflect the change in State.
 
-- [ ] Describe props.
+- [ ] Describe props.  
+  
+Props or properties are parameters/data sent from its parent to a component. It's similar to assigning attributes to HTML elements. To send in props you would write something like:
+ - \<ComponentName data="..." name="..."> and then to access it you would do "props.data and props.name."  
 
-- [ ] What are side effects, and how do you sync effects in a React component to state or prop changes?
+   
+
+- [ ] What are side effects, and how do you sync effects in a React component to state or prop changes?  
+    
+Side effects are extra 'effects' that happen outside of the function being executed. In React, that could refer to things in the background that occurs after the Component renders. This week, our side effect was doing a GET request from an API. We can control this with the React hook UseEffect. UseEffect allows you to run functions at specific times, such as load up, or when a specific state you are tracking changes. You can sync your props and state with the UseEffect hook. For example, we would do a API fetch in the UseEffect hook and set the state to the data provided from the fetch. 
 
 ## Project Set Up
 
